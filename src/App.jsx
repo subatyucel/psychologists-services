@@ -1,5 +1,12 @@
+import SvgIcon from "./components/atoms/SvgIcon";
+
 function App() {
-  return <h1>Hello world</h1>;
+  return (
+    <>
+      <SvgIcon />
+      <h1>Hello world</h1>
+    </>
+  );
 }
 
 export default App;
