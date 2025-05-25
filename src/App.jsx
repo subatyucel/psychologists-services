@@ -1,4 +1,3 @@
-import Navbar from "./components/organisms/Navbar";
 import AppRoutes from "./routes/AppRoutes";
 
 function App() {
