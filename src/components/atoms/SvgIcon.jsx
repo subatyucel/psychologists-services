@@ -1,6 +1,6 @@
-function SvgIcon({ cssClass = "", icon }) {
+function SvgIcon({ className = "", icon = "", ...props }) {
   return (
-    <svg className={cssClass}>
+    <svg className={className} {...props}>
       <use xlinkHref={`/sprite.svg#${icon}`}></use>
     </svg>
   );

@@ -10,3 +10,15 @@
   --color-primary-300: #36a379;
   --font-inter: "Inter", sans-serif;
 }
+
+body {
+  @apply font-inter font-normal text-dark;
+}
+
+.active {
+  @apply relative;
+}
+
+.active::after {
+  @apply absolute top-5 right-2/4 size-2 translate-x-2/4 rounded-full bg-primary-200 content-[''];
+}

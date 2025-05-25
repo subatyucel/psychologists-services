@@ -1,10 +1,10 @@
-import SvgIcon from "./components/atoms/SvgIcon";
+import Navbar from "./components/organisms/Navbar";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
     <>
-      <SvgIcon />
-      <h1>Hello world</h1>
+      <AppRoutes />
     </>
   );
 }
