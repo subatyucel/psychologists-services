@@ -1,25 +1,21 @@
-import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { registerSchema } from "../../utils/yupSchema";
-import PillButton from "../atoms/PillButton";
-import PasswordInput from "../molecules/PasswordInput";
+import { useForm } from "react-hook-form";
+import { loginSchema } from "../../utils/yupSchema";
 import FormInputWithError from "../molecules/FormInputWithError";
-import { useRegister } from "../../hooks/useRegister";
+import PasswordInput from "../molecules/PasswordInput";
+import PillButton from "../atoms/PillButton";
 
-function RegisterForm() {
-  const registerUser = useRegister();
-
+function LoginForm() {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm({
-    resolver: yupResolver(registerSchema),
+    resolver: yupResolver(loginSchema),
   });
 
   const onSubmit = (data) => {
     console.log("Veri", data);
-    registerUser(data);
   };
 
   return (
@@ -27,8 +23,6 @@ function RegisterForm() {
       onSubmit={handleSubmit(onSubmit)}
       className="flex w-full flex-col gap-4.5"
     >
-      <FormInputWithError register={register} name="name" error={errors.name} />
-
       <FormInputWithError
         register={register}
         name="email"
@@ -47,4 +41,4 @@ function RegisterForm() {
   );
 }
 
-export default RegisterForm;
+export default LoginForm;

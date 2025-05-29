@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from "./auth/authSlice";
-import interfaceReducer from "./interfaceSlice";
+import uiReducer from "./uiSlice";
+import userReducer from "./userSlice";
+import psychologistReducer from "./psychologistSlice";
 
 const store = configureStore({
   reducer: {
-    auth: authReducer,
-    interface: interfaceReducer,
+    ui: uiReducer,
+    user: userReducer,
+    psychologist: psychologistReducer,
   },
 });
 

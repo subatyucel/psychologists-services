@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 function NotFoundPage() {
   return (
-    <main className="flex h-dvh flex-col overflow-hidden p-4 text-center text-sm font-medium text-soft md:text-xl lg:p-24">
+    <main className="flex h-dvh flex-col p-4 text-center text-sm font-medium text-soft md:text-xl lg:p-24">
       <div className="my-auto">
         <h1 className="text-xl font-extrabold text-dark md:text-3xl">
           Oopss, page not found!
@@ -15,7 +15,7 @@ function NotFoundPage() {
           </Link>
         </p>
 
-        <img src="/notFound.svg" alt="Therapist and patient" />
+        <img className="" src="/notFound.svg" alt="Therapist and patient" />
       </div>
     </main>
   );
